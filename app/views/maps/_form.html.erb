@@ -1,0 +1,57 @@
+<%= form_with(model: map, local: true) do |form| %>
+  <% if map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(map.errors.count, "error") %> prohibited this map from being saved:</h2>
+
+      <ul>
+      <% map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+  <%= form.label :latitude %>
+  <%= form.text_field :latitude %>
+</div>
+
+<div class="field">
+  <%= form.label :longitude %>
+  <%= form.text_field :longitude %>
+</div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :holiday %>
+    <%= form.text_field :holiday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time1 %>
+    <%= form.text_field :time1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time2 %>
+    <%= form.text_field :time2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
