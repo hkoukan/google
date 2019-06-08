@@ -15,7 +15,7 @@ Get the current location</button>
     </a>
   </div>
 </footer>
-<!--<table>
+<!--<<table>
   <thead>
     <tr>
       <th>Address</th>
@@ -63,12 +63,13 @@ Get the current location</button>
  for(let i=0; i<maps.length; i++){
     let marker = new google.maps.Marker({                        //マーカーの追加
      position:{lat: maps[i].latitude , lng: maps[i].longitude}, //マーカーを立てる位置
-     map: map,                                                  //マーカーを立てる地図を指定
+     map: map,
+     animation: google.maps.Animation. DROP ,
    });
 
     marker.addListener ('click', function() {                    //マーカーにクリックイベントを追加
       let infowindow = new google.maps.InfoWindow({             //吹き出しの追加
-      content:`<a href=${maps[i]["link"]}>${maps[i]["name"]}</a> ` + ` </br> [closed]：${maps[i]["holiday"]} ` + ` </br>${maps[i]["time1"]} ` + ` </br>${maps[i]["time2"]}`              //吹き出しに表示する内容
+      content:`<a href=${maps[i]["link"]}>${maps[i]["name"]}</a> ` + ` [closed]：${maps[i]["holiday"]} ` + ` </br>${maps[i]["time1"]} ` + ` </br>${maps[i]["time2"]}`              //吹き出しに表示する内容
      });
     infowindow.open(map, this);                                 //吹き出しの表示
   });
@@ -88,6 +89,7 @@ Get the current location</button>
       new google.maps.Marker( {
         map: map ,
         position: latlng ,
+        animation: google.maps.Animation. DROP,
         icon: "http://maps.google.com/mapfiles/ms/micons/green-dot.png"
       });
 
@@ -97,12 +99,13 @@ Get the current location</button>
     for(let i=0; i<maps.length; i++){
     let marker = new google.maps.Marker({                        //マーカーの追加
      position:{lat: maps[i].latitude , lng: maps[i].longitude}, //マーカーを立てる位置
-     map: map,                                                  //マーカーを立てる地図を指定
+     map: map,
+     animation: google.maps.Animation. DROP                                           //マーカーを立てる地図を指定
    });
 
     marker.addListener ('click', function() {                    //マーカーにクリックイベントを追加
       let infowindow = new google.maps.InfoWindow({             //吹き出しの追加
-      content:`<a href=${maps[i]["link"]}>${maps[i]["name"]}</a> ` + ` </br> [closed]：${maps[i]["holiday"]} ` + ` </br>${maps[i]["time1"]} ` + ` </br>${maps[i]["time2"]}`              //吹き出しに表示する内容
+      content:`<a href=${maps[i]["link"]}>${maps[i]["name"]}</a> ` + `[closed]：${maps[i]["holiday"]} ` + ` </br>${maps[i]["time1"]} ` + ` </br>${maps[i]["time2"]}`              //吹き出しに表示する内容
      });
     infowindow.open(map, this);                                 //吹き出しの表示
     });
