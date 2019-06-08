@@ -19,8 +19,6 @@
   }
   header{
     display:flex;
-    /* background-color:black; */
-    /* opacity:0.5; */
     height:50px;
   }
    #map {
