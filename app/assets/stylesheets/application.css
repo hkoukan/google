@@ -29,29 +29,23 @@
    body{
      margin:0;
    }
-   #notice{
-     margin:0;
-   }
    #place{
      margin-bottom:0;
      height:100%;
      width:100%;
      font-size:30px;
    }
-   #place.hover{
-     background-color:black;
-   }
   .im{
     border-radius:30%;
     width:40px;
     height:40px;
   }
-a{
-display:flex;
-}
-#mail{
-  margin:0 50% 0 50%;
-}
+  a{
+  display:flex;
+  }
+  #mail{
+    margin:0 50% 0 50%;
+  }
 
 #down{
   text-align:center;
